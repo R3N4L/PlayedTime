@@ -1,0 +1,13 @@
+name: PlayedTime
+version: 1.0
+api: 3.0.0
+main: Renall\Main
+author: Renall
+
+commands:
+  pt:
+    description: tydak ada
+  tes:
+    description: blok
+  del:
+    description: qoqk
