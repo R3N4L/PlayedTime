@@ -4,7 +4,7 @@
 # {NAME} Name Player
 # {HOURS} Hours Played Player
 # {MINUTES} Minutes Played Player
-leaderboard-text: "{RANK}"
+leaderboard-text: "{RANK}. {NAME} - Hours {HOURS} - Minutes {MINUTES}"
 
 # Leaderboard Title
 leaderboard-title: "§aTop Played"
