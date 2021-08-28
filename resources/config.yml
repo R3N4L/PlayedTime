@@ -1,1 +1,10 @@
-Soon
+# Leaderboard Text
+# Tag
+# {RANK} Ranking Player
+# {NAME} Name Player
+# {HOURS} Hours Played Player
+# {MINUTES} Minutes Played Player
+leaderboard-text: "{RANK}"
+
+# Leaderboard Title
+leaderboard-title: "§aTop Played"
