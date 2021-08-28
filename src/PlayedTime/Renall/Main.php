@@ -79,7 +79,7 @@ class Main extends PluginBase implements Listener {
                  }
                  $this->updateLeaderboard();
              }
-         }), 20, 20*5);
+         }), 20, 20*60);
     }
 
     public function onJoin(PlayerJoinEvent $event) {
@@ -101,7 +101,7 @@ class Main extends PluginBase implements Listener {
 
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool {
         switch($cmd->getName()) {
-            case 'pt':
+            case 'playedtime':
                 if ($args[0] == 'leaderboard') {
                     if($args[1] == 'add') {
                     	$this->getServer()->getCommandMap()->dispatch($sender, 'slapper spawn human topplayed');
