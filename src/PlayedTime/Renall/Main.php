@@ -108,8 +108,17 @@ class Main extends PluginBase implements Listener {
                     	$this->getServer()->getCommandMap()->dispatch($sender, 'slapper spawn human topplayed');
                     } else if($args[1] == 'remove') {
                 	    $this->getServer()->getCommandMap()->dispatch($sender, 'slapper remove');
+                    } else {
+                        $sender->sendMessage("§aUsage: §e/playedtime leaderboard add/remove");
+                        return;
                     }
+                } else {
+                    $sender->sendMessage("§aUsage: §e/playedtime leaderboard add/remove");
+                    return;
                 }
+            break;
+            default:
+                $sender->sendMessage("§aUsage: §e/playedtime leaderboard add/remove");
             break;
         }
         return true;
