@@ -5,5 +5,8 @@ Played Time + top leaderboard
 - [Slapper](https://poggit.pmmp.io/p/Slapper/1.6.1)
 - [Slapper](https://github.com/Lunarelly/Slapper) (fix)
 
+# Screenshot
+![s](https://raw.githubusercontent.com/R3N4L/PlayedTime/main/Screenshot_20210828_172232.jpg)
+
 # Error / Bug
 Jika ada error atau bug hubungi saya di [sini](https://wa.me/6285334801766)
