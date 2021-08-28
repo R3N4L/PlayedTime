@@ -56,7 +56,10 @@ class Main extends PluginBase implements Listener {
          	$this->getServer()->getLogger()->info('played time enable on: ' . $cd . ' seccond');
              sleep(1);
          }
-         $this->getScheduler()->scheduleDelayedRepeatingTask(new ClosureTask(function() : void {
+         $this->getScheduler()->scheduleDelayedRepeatingTask(new ClosureTask(function(): void{
+             $this->updateLeaderboard();
+         }), 20 * 2);
+         $this->getScheduler()->scheduleDelayedRepeatingTask(new ClosureTask(function(): void{
              $antri = $this->antri->antri;
              $played = $this->played->played;
              if(!$played){
@@ -80,13 +83,14 @@ class Main extends PluginBase implements Listener {
                  }
                  $this->updateLeaderboard();
              }
-         }), 20, 20*60);
+         }), 20 * 60);
     }
 
     public function onJoin(PlayerJoinEvent $event) {
         $player = $event->getPlayer();
         $playername = $player->getName();
         $this->addAntri($playername);
+        $this->updateLeaderboard();
     }
 
     public function onQuit(PlayerQuitEvent $event) {
@@ -98,6 +102,7 @@ class Main extends PluginBase implements Listener {
     	} else {
     	    $this->removePlayed($playername);
     	}
+        $this->updateLeaderboard();
     }
 
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool {
