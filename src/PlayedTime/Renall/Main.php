@@ -1,5 +1,7 @@
 <?php
 
+//Collaborator github.com/MulqiGaming64
+
 namespace PlayedTime\Renall;
 
 use pocketmine\Server;
@@ -36,15 +38,14 @@ class Main extends PluginBase implements Listener {
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         @mkdir($this->getDataFolder());
+            $this->saveResource("config.yml");
+            $this->config = (new Config($this->getDataFolder() . "config.yml", Config::YAML))->getAll();
             $this->antri = new Config($this->getDataFolder() . "antri.json", Config::JSON);
             $this->antri->save();
-        @mkdir($this->getDataFolder());
             $this->played = new Config($this->getDataFolder() . "played.json", Config::JSON);
             $this->played->save();
-        @mkdir($this->getDataFolder());
              $this->time = new Config($this->getDataFolder() . "time.json", Config::JSON);
              $this->time->save();
-         @mkdir($this->getDataFolder());
              $this->leaderboard = new Config($this->getDataFolder() . "leaderboard.json", Config::JSON);
              $this->leaderboard->save();
          while(true){
