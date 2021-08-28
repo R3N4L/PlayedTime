@@ -2,5 +2,4 @@
 Played Time + top leaderboard
 
 # Depend
-- [slapper]
-(https://github.com/Lunarelly/Slapper)
+- [PureEntitiesX](https://poggit.pmmp.io/r/93487/PureEntitiesX.phar)
