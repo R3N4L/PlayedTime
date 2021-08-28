@@ -6,4 +6,11 @@ author: Renall
 
 commands:
   playedtime:
-    description: 
+    description: "Spawn Leaderboard"
+    default: op
+    permissions: playedtime.spawn
+    
+permissions:
+    playedtime.spawn:
+        default: op
+        description: "Permissions For Spawn Floating Leaderboard"
