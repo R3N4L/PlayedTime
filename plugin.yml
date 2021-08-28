@@ -2,7 +2,7 @@ name: PlayedTime
 version: 1.0
 api: 3.0.0
 main: PlayedTime\Renall\Main
-author: Renall
+author: Renall, MulqiGaming64
 
 commands:
   playedtime:
