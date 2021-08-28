@@ -146,7 +146,7 @@ class Main extends PluginBase implements Listener {
     }
     
     public function updateLeaderboard() {
-    	$res = 'Top Played';
+    	$res = $this->config["leaderboard-title"];
         $topName = $this->onTopNameLeaderboard();
         $timeDb = $this->time;
         $count = 1;
@@ -154,7 +154,7 @@ class Main extends PluginBase implements Listener {
             $timePlayer = $timeDb->$name;
             $hour = $timePlayer['hour'];
             $min = $timePlayer['min'];
-            $res .= TF::EOL . $count . '. ' . $name . ' - ' . $hour . ' jam ' . $min . ' menit';
+            $res .= TF::EOL . str_replace(["{RANK}", "{NAME}", "{HOURS}", "{MINUTES}"], [$count, $name, $hour, $min], $this->config["leaderboard-text"]);
             $count++;
         }
         foreach($this->getServer()->getLevels() as $level) {
