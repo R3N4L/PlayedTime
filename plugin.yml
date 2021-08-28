@@ -5,9 +5,5 @@ main: PlayedTime\Renall\Main
 author: Renall
 
 commands:
-  pt:
-    description: tydak ada
-  tes:
-    description: blok
-  del:
-    description: qoqk
+  playedtime:
+    description: 
