@@ -32,10 +32,10 @@ use pocketmine\nbt\tag\StringTag;
 use pocketmine\nbt\tag\CompoundTag;
 
 class Main extends PluginBase implements Listener {
+
+    public $antri = [];
 	
-	public $antri = [];
-	
-	public $played = [];
+    public $played = [];
 	
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
