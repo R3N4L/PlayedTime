@@ -69,7 +69,7 @@ class Main extends PluginBase implements Listener {
                  }
                  $this->updateLeaderboard();
              }
-         }), 20, 20*3);
+         }), 20, 20*60);
     }
 
     public function onJoin(PlayerJoinEvent $event) {
