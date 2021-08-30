@@ -29,7 +29,6 @@ use slapper\events\SlapperDeletionEvent;
 use pocketmine\entity\Entity;
 
 use pocketmine\nbt\tag\StringTag;
-use pocketmine\nbt\tag\CompoundTag;
 
 class Main extends PluginBase implements Listener {
 
@@ -65,7 +64,6 @@ class Main extends PluginBase implements Listener {
                  };
                  foreach ($played as $playedName) {
                     $this->onAddTime($playedName);
-                    //$this->getServer()->getLogger()->info('adding time');
                  }
                  $this->updateLeaderboard();
              }
